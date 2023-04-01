@@ -1,0 +1,28 @@
+{{#if vehiculos}}
+
+<div class="row row-cols-2 row-cols-md-4 g-4 mt-5">
+   
+          {{#each vehiculos}}
+
+  <div class="col">
+    <div class="card text-bg-dark">
+      <img src="/img/{{this.imagen}}" class="card-img-top" style="object-fit:cover; height:200px"alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Marca : {{this.marca}}</h5>
+        <p class="card-text">Modelo :  {{this.modelo}}</p>
+
+        <p class="card-text">Año :  {{fecha this.year}}</p>
+
+      </div>
+    </div>
+  </div>
+  {{/each}}
+
+</div>
+
+{{else}}
+    <div class="mt-5">
+        <p class="text-center">por el momento no tenemos vehiculos registrados</p>
+    </div>
+{{/if}}
+
